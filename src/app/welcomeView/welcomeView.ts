@@ -1,3 +1,4 @@
+import { HtmlParser } from '@angular/compiler';
 import {Component} from '@angular/core';
 
 @Component({
@@ -7,7 +8,16 @@ import {Component} from '@angular/core';
 })
 
 export class welcomeView{
-      title = 'Bienvenido a la aplicaciones';
+      title: string = 'Bienvenido a la aplicaciones';
 
-      user = ['Juan', 'Miguel', 'Erick', 'Oswaldo', 'Jose', 'Ignacio'];
+      userArray = ['Juan', 'Miguel', 'Erick', 'Jose', 'Ignacio'];
+
+      saludoUser(datoNombre: HTMLInputElement){
+      console.log(datoNombre.value);
+        return false;
+      }
+
+      sumaNumber(dataNumber: HTMLInputElement) {
+        alert(dataNumber.value);
+      }
 }
