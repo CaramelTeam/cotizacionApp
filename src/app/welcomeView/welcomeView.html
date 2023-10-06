@@ -5,9 +5,18 @@
 <p>This is some normal text.</p>
 <p><small>{{title}}</small></p>
 
-<ul>
-   <li *ngFor="let users of user"> {{users}}</li>
-</ul>
+<app-cotizacion-view *ngFor="let usersName of userArray" [usersName]="usersName"></app-cotizacion-view>
+
+
+
+<form>
+  <input type="text" #datoNombre>
+  <button (click)="saludoUser(datoNombre)"> Saludo</button>
+</form>
+
+<input type="number" #dataNumber (change)="sumaNumber(dataNumber)">
+
+
 
 </body>
 </html>
